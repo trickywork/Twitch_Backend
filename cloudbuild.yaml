@@ -3,12 +3,12 @@ steps:
     args:
       - build
       - -t
-      - us-central1-docker.pkg.dev/$PROJECT_ID/portfolio/twitch-api:$COMMIT_SHA
+      - us-central1-docker.pkg.dev/$PROJECT_ID/portfolio-repo/twitch-api:$COMMIT_SHA
       - .
   - name: gcr.io/cloud-builders/docker
     args:
       - push
-      - us-central1-docker.pkg.dev/$PROJECT_ID/portfolio/twitch-api:$COMMIT_SHA
+      - us-central1-docker.pkg.dev/$PROJECT_ID/portfolio-repo/twitch-api:$COMMIT_SHA
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
     entrypoint: gcloud
     args:
@@ -16,7 +16,7 @@ steps:
       - deploy
       - twitch-api
       - --image
-      - us-central1-docker.pkg.dev/$PROJECT_ID/portfolio/twitch-api:$COMMIT_SHA
+      - us-central1-docker.pkg.dev/$PROJECT_ID/portfolio-repo/twitch-api:$COMMIT_SHA
       - --region
       - us-central1
       - --platform
@@ -33,4 +33,4 @@ steps:
       - --set-env-vars
       - TWITCH_DEMO_MODE=true
 images:
-  - us-central1-docker.pkg.dev/$PROJECT_ID/portfolio/twitch-api:$COMMIT_SHA
+  - us-central1-docker.pkg.dev/$PROJECT_ID/portfolio-repo/twitch-api:$COMMIT_SHA
