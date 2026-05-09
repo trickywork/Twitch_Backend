@@ -5,8 +5,8 @@ Spring Boot API for a Twitch discovery portfolio project. It exposes game search
 ## Live Service
 
 - Cloud Run service: `twitch-api`
-- Cloud Run URL: `https://twitch-api-888561484971.us-central1.run.app`
-- Frontend service: `https://twitch-888561484971.us-central1.run.app`
+- Cloud Run URL: `https://twitch-api-gb7rmueyna-uc.a.run.app`
+- Frontend service: `https://twitch-gb7rmueyna-uc.a.run.app`
 - Portfolio URL: `https://twitch.junliu.dev`
 - Google Cloud project: `caramel-vim-441513-e1`
 - Region: `us-central1`
@@ -141,7 +141,7 @@ baseUrl=http://localhost:8080
 For Cloud Run:
 
 ```text
-baseUrl=https://twitch-api-888561484971.us-central1.run.app
+baseUrl=https://twitch-api-gb7rmueyna-uc.a.run.app
 ```
 
 ## Tests And Build
@@ -204,7 +204,7 @@ https://github.com/trickywork/Twitch_Frontend
 The deployed frontend should use:
 
 ```env
-REACT_APP_API_BASE_URL=https://twitch-api-888561484971.us-central1.run.app
+REACT_APP_API_BASE_URL=https://twitch-api-gb7rmueyna-uc.a.run.app
 ```
 
 ## Expected Portfolio Behavior
