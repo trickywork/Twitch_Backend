@@ -8,7 +8,7 @@ Spring Boot API for a Twitch discovery demo. It exposes games, grouped streams/v
 - `GET /search?game_id=` returns streams, videos, and clips grouped by type.
 - `GET /recommendation` returns content for a favorite game or a popular game.
 - `GET /favorite`, `POST /favorite`, `DELETE /favorite/{twitchId}` manage demo favorites.
-- `GET /healthz` supports Cloud Run health checks.
+- `GET /health` supports quick deployment smoke checks.
 - Demo mode works without Twitch API credentials; live mode uses Twitch client credentials.
 
 ## Local Run

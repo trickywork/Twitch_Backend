@@ -14,7 +14,7 @@
       "name": "Health",
       "request": {
         "method": "GET",
-        "url": "{{base_url}}/healthz"
+        "url": "{{base_url}}/health"
       }
     },
     {

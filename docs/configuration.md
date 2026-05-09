@@ -15,7 +15,7 @@
 1. Copy `.env.example` to `.env`.
 2. Keep `TWITCH_DEMO_MODE=true` for local UI development without credentials.
 3. Run `./gradlew bootRun`.
-4. Open `http://localhost:8080/healthz` to verify the backend.
+4. Open `http://localhost:8080/health` to verify the backend.
 
 ## Database Notes
 
