@@ -1,12 +1,10 @@
-logging:
-  level:
-    org.apache.coyote.http11.Http11InputBuffer: TRACE # Incoming HTTP requests
-    twitch.external.TwitchApiClient: DEBUG
-#spring.application.name=twitch
-#print out specific http request
+server:
+  port: ${PORT:8080}
 
+app:
+  twitch:
+    demo-mode: ${TWITCH_DEMO_MODE:true}
 
-#eliminate null in json
 spring:
   jackson:
     default-property-inclusion: non_null
@@ -22,7 +20,7 @@ spring:
             url: https://api.twitch.tv/helix
             loggerLevel: basic
             default-request-headers:
-              Client-Id: "7jd01st4qek5mqblv5w3azpwgl86h3"
+              Client-Id: "${TWITCH_CLIENT_ID:demo-client-id}"
 
   security:
     oauth2:
@@ -31,8 +29,13 @@ spring:
           twitch:
             authorization-grant-type: client_credentials
             client-authentication-method: client_secret_post
-            client-id: "7jd01st4qek5mqblv5w3azpwgl86h3"
-            client-secret: "xwmvydxc4r127sic6fa0qgxi9jo0c8"
+            client-id: "${TWITCH_CLIENT_ID:demo-client-id}"
+            client-secret: "${TWITCH_CLIENT_SECRET:demo-client-secret}"
         provider:
           twitch:
             token-uri: https://id.twitch.tv/oauth2/token
+
+logging:
+  level:
+    twitch: INFO
+    twitch.external.TwitchApiClient: ${TWITCH_API_LOG_LEVEL:DEBUG}

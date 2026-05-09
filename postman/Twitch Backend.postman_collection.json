@@ -1,0 +1,80 @@
+{
+  "info": {
+    "name": "Twitch Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/healthz"
+      }
+    },
+    {
+      "name": "Top Games",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/game"
+      }
+    },
+    {
+      "name": "Search Games",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/game?game_name=fortnite"
+      }
+    },
+    {
+      "name": "Search Game Items",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/search?game_id=33214"
+      }
+    },
+    {
+      "name": "Recommendations",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/recommendation"
+      }
+    },
+    {
+      "name": "Get Favorites",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/favorite"
+      }
+    },
+    {
+      "name": "Add Favorite",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": null,\n  \"twitch_id\": \"clip-33214-1\",\n  \"title\": \"Clean clutch in Fortnite\",\n  \"url\": \"https://www.twitch.tv/junplays/clip/example\",\n  \"thumbnail_url\": \"https://picsum.photos/seed/twitch-clip-33214-1/480/270\",\n  \"broadcaster_name\": \"JunPlays\",\n  \"game_id\": \"33214\",\n  \"item_type\": \"CLIP\"\n}"
+        },
+        "url": "{{base_url}}/favorite"
+      }
+    },
+    {
+      "name": "Delete Favorite",
+      "request": {
+        "method": "DELETE",
+        "url": "{{base_url}}/favorite/clip-33214-1"
+      }
+    }
+  ]
+}
