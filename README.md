@@ -1,5 +1,7 @@
 # Twitch Backend
 
+[![CI](https://github.com/trickywork/Twitch_Backend/actions/workflows/ci.yml/badge.svg)](https://github.com/trickywork/Twitch_Backend/actions/workflows/ci.yml)
+
 Spring Boot API for a Twitch discovery portfolio project. It exposes game search, grouped Twitch content, favorites, and recommendations. The default deployment uses demo data so the project is usable without Twitch developer credentials.
 
 ## Live Service
@@ -128,7 +130,7 @@ Use the local Postman workspace collections:
 
 ```text
 Twitch APIs
-202505 Twitch App Backend - Coding Pad API Tests
+Twitch Backend - Portfolio API Smoke Tests
 ```
 
 Suggested variables:
@@ -143,11 +145,7 @@ For Cloud Run:
 baseUrl=https://twitch-api-gb7rmueyna-uc.a.run.app
 ```
 
-The repo-exported backup copy is stored outside GitHub at:
-
-```text
-/Users/junliu/CourseArtifacts/postman/project-exported/Twitch Backend.postman_collection.json
-```
+The exported backup copy is kept in a private local archive outside this public repo.
 
 ## Tests And Build
 
@@ -202,7 +200,6 @@ gcloud run services update twitch-api \
 Frontend repo:
 
 ```text
-/Users/junliu/git_repo/Twitch_frontend
 https://github.com/trickywork/Twitch_Frontend
 ```
 
