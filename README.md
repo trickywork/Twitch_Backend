@@ -22,7 +22,7 @@ Spring Boot API for a Twitch discovery portfolio project. It exposes game search
 - JavaFaker/DataFaker-style demo data
 - Gradle wrapper
 - Docker, Google Cloud Build, Google Cloud Run
-- Postman collection for API testing
+- API testing via local Postman workspace
 
 ## Project Structure
 
@@ -38,8 +38,6 @@ Twitch_backend/
     application.yml
   docs/
     configuration.md
-  postman/
-    Twitch Backend.postman_collection.json
   Dockerfile
   cloudbuild.yaml
   .env.example
@@ -126,10 +124,11 @@ Do not commit real Twitch credentials. On Google Cloud, store the secret in Secr
 
 ## Postman
 
-Import:
+Use the local Postman workspace collections:
 
 ```text
-postman/Twitch Backend.postman_collection.json
+Twitch APIs
+202505 Twitch App Backend - Coding Pad API Tests
 ```
 
 Suggested variables:
@@ -142,6 +141,12 @@ For Cloud Run:
 
 ```text
 baseUrl=https://twitch-api-gb7rmueyna-uc.a.run.app
+```
+
+The repo-exported backup copy is stored outside GitHub at:
+
+```text
+/Users/junliu/CourseArtifacts/postman/project-exported/Twitch Backend.postman_collection.json
 ```
 
 ## Tests And Build
